@@ -27,7 +27,7 @@ def handle_client(conn, addr):
         conn.sendall(ans)
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-server.bind(('127.0.0.1', 1616))
+server.bind(('', 1616))#绑定到 ​​所有 IPv4 地址​​
 server.listen(5)
 print("服务器启动，等待连接...")
 while True:
