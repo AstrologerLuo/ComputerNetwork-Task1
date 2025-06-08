@@ -13,11 +13,12 @@ chunks_len=[]   #每一块的大小
 lmin=int(input("请输入一块的最小值（单位B）："))
 lmax=int(input("请输入一块的最大值（单位B）："))
 while True:
-    chunk_size=random.randint(lmin,lmax)    #将文件随机划分成10B到20B
-    chunks_len.append(chunk_size)
+    chunk_size=random.randint(lmin,lmax)
     chunk=f.read(chunk_size)
     if not chunk:
         break
+    real_len=len(chunk)#最后一块可能小于chunk_size
+    chunks_len.append(real_len)
     chunks.append(chunk)
     chunk_num+=1
 initialization=struct.pack('>HI',1,chunk_num)   #大端序也就是网络序
