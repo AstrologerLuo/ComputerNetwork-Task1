@@ -1,9 +1,9 @@
 # ComputerNetwork-Task1
-This is an assignment for a computer networking course.
-## Getting Started
-### Prerequisites
+这是计算机网络课程的课程设计。
+## 开始
+### 运行环境
 Python(>=3.x)
-### Installation
+### 安装
 ```bash
 git clone https://github.com/AstrologerLuo/ComputerNetwork-Task1
 ```
